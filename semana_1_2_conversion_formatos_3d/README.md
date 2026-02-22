@@ -78,22 +78,22 @@ Se trabajó tanto en Python como en Three.js, implementando herramientas de aná
 
 ### Three.js - Comparador de Formatos
 
-![Visualizador de formatos](media/threejs_comparacion.png)
+![Visualizador de formatos](media/threejs.png)
 *Fig 1: Interfaz del visualizador mostrando el mismo modelo en diferentes formatos*
 
-![Demostración de conversión](media/conversion_demo.gif)
-*Fig 2: Alternancia entre modelos OBJ, STL y GLTF mostrando diferencias visuales*
+![Demostración 1](media/threejs1.gif)
+*Fig 2: Alternancia entre modelos OBJ, STL y GLTF*
 
-![Detalles de renderizado](media/render_differences.png)
-*Fig 3: Comparación lado a lado de las diferencias en suavidad y materiales*
+![Demostración 2](media/threejs2.gif)
+*Fig 3: Visualización de diferencias en renderizado*
+
+![Demostración 3](media/threejs3.gif)
+*Fig 4: Exploración interactiva con OrbitControls*
 
 ### Python - Análisis de Conversiones
 
-![Análisis Python](media/python_conversion.png)
-*Fig 4: Comparación de propiedades estructurales entre formatos*
-
-![Estadísticas de conversión](media/python_stats.png)
-*Fig 5: Tabla comparativa de vértices, caras y tamaño de archivo*
+![Análisis Python](media/python.gif)
+*Fig 5: Comparación de propiedades estructurales y conversión entre formatos*
 
 ---
 
