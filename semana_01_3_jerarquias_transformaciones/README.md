@@ -1,7 +1,7 @@
 # Taller Jerarquias Transformaciones
 
 **Estudiante:** Jerónimo Bermúdez Hernández  
-**Fecha de entrega:** 22 de febrero de 2026
+**Fecha de entrega:** 21 de febrero de 2026
 
 ---
 
