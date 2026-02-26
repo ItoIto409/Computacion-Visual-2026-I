@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeron\\VIsuaal\\Assembly-CSharp.csproj": {}
+    "C:\\Users\\jeron\\OneDrive\\Escritorio\\Visual\\semana_01_3_jerarquias_transformaciones\\unity\\Assembly-CSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeron\\VIsuaal\\Assembly-CSharp.csproj": {
+    "C:\\Users\\jeron\\OneDrive\\Escritorio\\Visual\\semana_01_3_jerarquias_transformaciones\\unity\\Assembly-CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeron\\VIsuaal\\Assembly-CSharp.csproj",
+        "projectUniqueName": "C:\\Users\\jeron\\OneDrive\\Escritorio\\Visual\\semana_01_3_jerarquias_transformaciones\\unity\\Assembly-CSharp.csproj",
         "projectName": "Assembly-CSharp",
-        "projectPath": "C:\\Users\\jeron\\VIsuaal\\Assembly-CSharp.csproj",
+        "projectPath": "C:\\Users\\jeron\\OneDrive\\Escritorio\\Visual\\semana_01_3_jerarquias_transformaciones\\unity\\Assembly-CSharp.csproj",
         "packagesPath": "C:\\Users\\jeron\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeron\\VIsuaal\\Temp\\obj\\Assembly-CSharp\\",
+        "outputPath": "C:\\Users\\jeron\\OneDrive\\Escritorio\\Visual\\semana_01_3_jerarquias_transformaciones\\unity\\Temp\\obj\\Assembly-CSharp\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jeron\\AppData\\Roaming\\NuGet\\NuGet.Config"
