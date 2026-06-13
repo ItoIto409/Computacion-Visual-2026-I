@@ -1,0 +1,20 @@
+{
+  "name": "escena-3d-interactiva-futurista",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "make-gif": "node scripts/make-gif.mjs"
+  },
+  "dependencies": {
+    "gif-encoder-2": "^1.0.5",
+    "pngjs": "^7.0.0",
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  }
+}
