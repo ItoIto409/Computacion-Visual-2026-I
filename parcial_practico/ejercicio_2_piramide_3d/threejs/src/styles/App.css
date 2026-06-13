@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #090b14;
+  --panel: rgba(14, 17, 29, 0.82);
+  --panel-strong: rgba(10, 12, 22, 0.96);
+  --text: #f7f4ee;
+  --muted: #b9bfd4;
+  --accent: #ffb35c;
+  --accent-2: #7fb7ff;
+  --stroke: rgba(255, 255, 255, 0.08);
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255, 179, 92, 0.18), transparent 28%),
+    radial-gradient(circle at right center, rgba(127, 183, 255, 0.18), transparent 26%),
+    linear-gradient(145deg, #05060b 0%, #0b1020 52%, #121929 100%);
+  color: var(--text);
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+}
+
+.hero-panel {
+  position: relative;
+  padding: 3rem 2.25rem;
+  border-right: 1px solid var(--stroke);
+  background: linear-gradient(180deg, rgba(8, 10, 18, 0.94), rgba(12, 15, 27, 0.82));
+  backdrop-filter: blur(18px);
+}
+
+.hero-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 179, 92, 0.06), transparent 28%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 179, 92, 0.28);
+  border-radius: 999px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-panel h1 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  line-height: 0.95;
+  max-width: 12ch;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta-grid article,
+.notes-card {
+  background: var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: 1rem;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.meta-grid article {
+  padding: 0.95rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.meta-label {
+  color: var(--accent-2);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.meta-grid strong {
+  font-size: 0.98rem;
+  color: var(--text);
+}
+
+.notes-card {
+  padding: 1.1rem 1.15rem;
+  background: var(--panel-strong);
+}
+
+.notes-card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.85rem;
+  color: var(--accent);
+}
+
+.notes-card ul {
+  list-style: none;
+  display: grid;
+  gap: 0.65rem;
+  color: var(--muted);
+}
+
+.notes-card li {
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.notes-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.notes-card code {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0.35rem;
+  padding: 0.1rem 0.35rem;
+}
+
+.viewer-panel {
+  position: relative;
+  min-height: 100vh;
+  padding: 1.2rem;
+}
+
+.viewer-panel::before {
+  content: '';
+  position: absolute;
+  inset: 1.2rem;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at top, rgba(127, 183, 255, 0.14), transparent 34%),
+    linear-gradient(160deg, rgba(6, 8, 15, 0.8), rgba(13, 17, 30, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.viewer-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: calc(100vh - 2.4rem);
+  border-radius: 1.35rem;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .page-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    border-right: 0;
+    border-bottom: 1px solid var(--stroke);
+  }
+
+  .viewer-panel {
+    min-height: 72vh;
+  }
+
+  .viewer-frame {
+    height: calc(72vh - 2.4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-panel,
+  .viewer-panel {
+    padding: 1rem;
+  }
+
+  .viewer-panel::before {
+    inset: 1rem;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
